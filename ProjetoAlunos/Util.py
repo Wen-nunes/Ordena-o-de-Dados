@@ -6,18 +6,16 @@ class Util:
 
     @staticmethod
     def gerar_palavras_arquivo(nome_arquivo, quantidade, tamanho):
-        # Abrindo o arquivo em modo de escrita ('w'). 
-        # Isso cria o arquivo se ele não existir ou o sobrescreve se ele já existir.
+      
         with open(nome_arquivo, 'w', encoding='utf-8') as arquivo:
-            for i in range(0,quantidade):
+            for i in range(0,quantidade):    
                 arquivo.write( Util.gerar_palavra(tamanho) + '\n' )            
 
         print(f"As palavras foram salvas em {nome_arquivo}.")
 
     @staticmethod
     def gerar_numeros_arquivo(nome_arquivo, quantidade, tamanho):
-        # Abrindo o arquivo em modo de escrita ('w'). 
-        # Isso cria o arquivo se ele não existir ou o sobrescreve se ele já existir.
+       
         with open(nome_arquivo, 'w', encoding='utf-8') as arquivo:
             for i in range(0,quantidade):
                 arquivo.write( str(random.randint(0,tamanho)) + '\n' )            
@@ -26,7 +24,7 @@ class Util:
 
     @staticmethod
     def gerar_numeros_lista(lista, quantidade, tamanho):
-        """ Método estático que popula um lista com números inteiros aleatórios
+        """ Método estático que popula uma lista com números inteiros aleatórios
 
         Args:
             lista (int): contém os números gerados
